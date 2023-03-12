@@ -1,5 +1,6 @@
 @import "../utilities/functions";
 
+//category component styles
 .category {
     margin: auto;
     display: flex;
@@ -27,7 +28,6 @@
         }
 
         .v-btn-group {
-            // padding: 20px !important; 
             margin: auto !important;
             height: fit-content !important;
 

@@ -1,18 +1,21 @@
-<script>
-</script>
+ 
 <template>
+  <!-- ===== navigation parent ===== -->
   <v-col cols="12" class="pa-0 pt-2 navigation">
     <v-col
       cols="12"
       class="pa-0 justify-space-between align-center d-none d-md-flex"
     >
       <logo class="ml-8" />
+      <!-- ===== navigation search bar ===== -->
       <v-text-field
         class="primaryInput mt-5 mx-1"
         placeholder="نام محصول یا برند مورد نظر خود را وارد نمایید"
         append-inner-icon="fi fi-rr-search"
         variant="solo"
       ></v-text-field>
+
+      <!-- ===== navigation option buttons ===== -->
       <div class="align-center d-none d-md-flex">
         <v-badge
           :content="1"
@@ -44,6 +47,7 @@
         </v-btn>
       </div>
     </v-col>
+    <!-- ===== navigation responsive section ===== -->
     <v-col
       cols="12"
       class="pa-0 justify-space-between align-center d-md-none d-flex flex-column"
@@ -67,6 +71,7 @@
       </v-col>
     </v-col>
     <v-col cols="12" class="pa-0 px-1">
+      <!-- ===== navigate to pages ===== -->
       <v-card
         width="100%"
         class="d-flex justify-space-between align-center navLinks"

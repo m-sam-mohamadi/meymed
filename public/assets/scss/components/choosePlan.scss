@@ -1,14 +1,13 @@
 @import "../utilities/functions";
 
+//choose plan component styles
 .planButtons {
-    // @include centering('flex');
     box-shadow: 5px 8px 30px -15px rgba(0, 0, 0, 0.1) !important;
     border-radius: 15px !important;
     background-color: white;
     width: 100%;
 
     .v-btn-group {
-        // padding: 20px !important; 
         margin: auto !important;
         height: fit-content !important;
         padding: 15px 45px !important;

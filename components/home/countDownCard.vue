@@ -7,6 +7,7 @@ let second = ref(0);
 
 let countDownToTime = ref(new Date("Sep 26, 2023 00:00:00").getTime());
 let timerOutput = ref(null);
+//calculate count down ↓
 function startTimer() {
   const timeNow = new Date().getTime();
   const timeDifference = countDownToTime.value - timeNow;

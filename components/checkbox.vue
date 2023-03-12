@@ -1,3 +1,11 @@
+<script>
+export default {
+  //custom checkbox
+  props: {
+    isChecked: Boolean,
+  },
+};
+</script>
 <template>
   <div @click="isChecked = !isChecked" class="checkbox">
     <div class="checkboxBox">
@@ -10,13 +18,6 @@
   </div>
 </template>
 
-<script  >
-export default {
-  props: {
-    isChecked: Boolean,
-  },
-};
-</script>
 
 <style lang="scss">
 @import "../public/assets/scss/components/checkbox.scss";

@@ -2,6 +2,7 @@
 
 @import "../utilities/functions";
 
+//navigation class
 .navigation {
     .navLinks {
 
@@ -36,6 +37,7 @@
     }
 }
 
+//primary button class
 .primaryBtn {
     border-radius: 15px !important;
     box-shadow: 5px 8px 30px -15px rgba(0, 0, 0, 0.1) !important;
@@ -45,6 +47,7 @@
     align-items: center;
 }
 
+//primary input class
 .primaryInput {
     box-shadow: none !important;
 
@@ -75,6 +78,7 @@
     }
 }
 
+//change color to blue
 .blueDetail {
     font-size: 14px;
     text-align: center;
@@ -91,6 +95,7 @@
 
 }
 
+//main title
 .mainTitle {
     font-weight: 700 !important;
     font-size: 20px !important;
@@ -102,8 +107,8 @@
     padding: 30px;
 }
 
+//customers logo
 .componyLogo {
-
     box-shadow: 5px 10px 30px -15px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
 
@@ -132,6 +137,7 @@
     border-radius: 10px !important;
 }
 
+//title for tabs
 .tabTitle {
 
     font-weight: 800;

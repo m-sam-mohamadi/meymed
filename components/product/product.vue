@@ -7,8 +7,10 @@ import { Carousel, Slide, Navigation } from "vue3-carousel";
 import productDetails from "./productDetails.vue";
 import productGallery from "./productGallery.vue";
 import { ref } from "vue";
+//fetching slider data
 const products = await $fetch("/api/products");
 const myCarousel = ref(null);
+//responsive carousel
 const breakpoint1 = ref({
   500: {
     itemsToShow: 2,
@@ -38,8 +40,12 @@ const breakpoint1 = ref({
       bgColor="white"
       class="primaryBtn justify-start mt-6"
     ></v-breadcrumbs>
+    <!-- ===== gallery section===== -->
     <productGallery />
+    <!-- ===== details section===== -->
     <productDetails />
+
+    <!-- ===== product slider section===== -->
     <v-col cols="12">
       <h3 class="mainTitle text-center mt-16">محصولات مرتبط</h3>
       <div class="sliderPaging" v-if="myCarousel">
@@ -50,7 +56,6 @@ const breakpoint1 = ref({
           <v-icon icon="fi fi-rr-arrow-small-left" />
         </button>
       </div>
-      <!-- <client-only> -->
       <v-col cols="12">
         <carousel
           class="mt-16 pa-0"

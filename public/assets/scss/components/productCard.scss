@@ -1,5 +1,6 @@
 @import "../utilities/functions";
 
+//products card styles
 .productCard {
     @include centering('flex');
     flex-direction: column;

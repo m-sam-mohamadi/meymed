@@ -12,35 +12,21 @@
   transform: translateX(100%);
 }
 
-//slide fade mode animation
-
-
-
-.fade {
-  // backface-visibility: hidden;
-  // z-index: 1;
-}
-
-/* moving */
+//fade transition
 .fade-move {
   transition: all .3s;
-  // opacity: 0;
 }
 
-/* appearing */
 .fade-enter-active {
   transition: all .3s;
   opacity: 0;
   display: none;
 }
 
-/* disappearing */
 .fade-leave-active {
   transition: all .3s;
-  // opacity: 0;
 }
 
-/* appear at / disappear to */
 .fade-enter,
 .fade-leave-to {
   opacity: 0;

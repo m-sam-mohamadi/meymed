@@ -4,13 +4,13 @@ import productCard from "../productCard.vue";
 let toggleBtn = ref(0);
 
 const products = await $fetch("/api/products");
-console.log(products);
 </script>
 
 <template>
   <v-col cols="12" class="ma-auto mt-15 mb-10">
     <div class="category">
       <v-col lg="9" md="10" cols="12" class="pa-0 ma-auto">
+        <!-- ===== category buttons ↓ ===== -->
         <div class="categoryController">
           <v-btn-toggle v-model="toggleBtn">
             <v-btn color="#4A95E3" variant="text"> دستگاه های پزشکی </v-btn>
@@ -25,6 +25,7 @@ console.log(products);
         </div>
       </v-col>
       <v-col cols="12" class="mt-15">
+        <!-- ===== category sections ↓ ===== -->
         <transition-group name="fade" mode="out-in">
           <div class="products" v-if="toggleBtn == 0">
             <productCard

@@ -11,6 +11,7 @@ let isPlaying2 = ref(false);
 let seekbar = ref(0);
 let seekbarVol = ref(0);
 const clientSlider = ref(null);
+//responsive carousel
 const breakpoint1 = ref({
   500: {
     itemsToShow: 2,
@@ -26,6 +27,7 @@ const breakpoint1 = ref({
     itemsToShow: 4,
   },
 });
+//responsive carousel
 const breakpoint2 = ref({
   500: {
     itemsToShow: 2,
@@ -42,6 +44,7 @@ const breakpoint2 = ref({
   },
 });
 
+//reviews list
 let comments = ref([
   {
     name: "کاربر می مد",
@@ -60,7 +63,7 @@ let comments = ref([
     rate: 3,
   },
 ]);
-
+//addReview
 function addReview() {
   if (name.value == "" || review.value == "") return;
   comments.value.push({
@@ -72,6 +75,7 @@ function addReview() {
   review.value = "";
   rating.value = "";
 }
+//play or pause video
 function toggleVideo() {
   let video = document.getElementById("video");
   let icon = document.querySelector(".playBtn");
@@ -84,6 +88,7 @@ function toggleVideo() {
   }
   isPlaying.value = !isPlaying.value;
 }
+//play or pause audio
 function toggleAudio() {
   let audio = document.getElementById("audio");
   console.log(audio);
@@ -96,6 +101,7 @@ function toggleAudio() {
 }
 </script>
 <template>
+  <!-- ===== product tabs ===== -->
   <v-tabs
     v-model="tab"
     color="#4A95E3"
@@ -110,6 +116,7 @@ function toggleAudio() {
     <v-tab :value="4">محتوای چند رسانه ای</v-tab>
   </v-tabs>
   <v-window v-model="tab" class="mt-8">
+    <!-- ===== product detail tab===== -->
     <v-window-item :value="1">
       <v-card class="d-flex justify-center align-start pa-6 primaryBtn">
         <v-col cols="12" md="6">
@@ -184,6 +191,7 @@ function toggleAudio() {
         </v-col>
       </v-card>
     </v-window-item>
+    <!-- ===== product review tab===== -->
     <v-window-item :value="2">
       <v-card class="d-flex justify-center align-start pa-6 primaryBtn">
         <v-col cols="12" md="8">
@@ -263,6 +271,7 @@ function toggleAudio() {
         </v-col>
       </v-card>
     </v-window-item>
+    <!-- ===== product customers tab===== -->
     <v-window-item :value="3">
       <v-card class="pa-6 primaryBtn flex-column">
         <div
@@ -310,6 +319,7 @@ function toggleAudio() {
         <!-- </client-only> -->
       </v-card>
     </v-window-item>
+    <!-- ===== product intro tab===== -->
     <v-window-item :value="4">
       <v-card class="pa-6 primaryBtn flex-column">
         <v-row class="mt-4 px-6 flex-md-row flex-column-reverse">

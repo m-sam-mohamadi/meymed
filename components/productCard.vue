@@ -1,6 +1,7 @@
 
 <script setup>
 import { ref } from "vue";
+//props for pass data
 let props = defineProps({
   img: {
     type: String,
@@ -27,7 +28,9 @@ let props = defineProps({
     required: true,
   },
 });
+//divide price by "," for pure price
 let price = props.price.split(",").join("");
+//Discount calculation
 const discountedPrice = ref(
   Number(Number(price) - Number(price) * (props.discount / 100))
     .toLocaleString()
@@ -36,16 +39,21 @@ const discountedPrice = ref(
 );
 </script>
 <template>
+  <!-- ===== product card ===== -->
   <div class="productCard">
+    <!-- ===== product card image ===== -->
     <v-img
       class="productImg"
       width="80%"
       :src="img"
       @click="navigateTo('/product')"
     ></v-img>
+    <!-- ===== product card serial code =====-->
     <span class="productSerial"> کد {{ props.serialCode }}</span>
 
+    <!-- ===== product card title =====-->
     <p class="productTitle">{{ props.text }}</p>
+    <!-- ===== product card information =====-->
     <div class="productInfo">
       <v-icon class="likeIcon" icon="fi fi-rr-heart " />
       <div class="productPrice">
@@ -57,6 +65,7 @@ const discountedPrice = ref(
           </div>
         </div>
 
+        <!-- ===== product card serial price ===== -->
         <span class="price">{{ props.price }}</span>
       </div>
     </div>

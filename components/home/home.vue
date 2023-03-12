@@ -14,6 +14,8 @@ import { Carousel, Slide, Navigation } from "vue3-carousel";
 const products = await $fetch("/api/products");
 const myCarousel = ref(null);
 const myCarousel2 = ref(null);
+
+//responsive carousel↓
 const breakpoint1 = ref({
   500: {
     itemsToShow: 2,
@@ -35,6 +37,7 @@ const breakpoint1 = ref({
     itemsToShow: 6,
   },
 });
+//responsive carousel↓
 const breakpoint2 = ref({
   500: {
     itemsToShow: 2,
@@ -62,7 +65,10 @@ const breakpoint2 = ref({
     xl="8"
     class="pa-md-0 px-6 ma-auto position-relative"
   >
+    <!-- ===== navigation component↓ ===== -->
     <navigation />
+
+    <!-- ===== site category↓ ===== -->
     <v-col cols="12" class="d-flex justify-center flex-wrap align-center pt-12">
       <v-card width="160px" height="160px" class="catCard">
         <v-img width="72px" src="/assets/images/CT Scanner.png"></v-img>
@@ -85,7 +91,9 @@ const breakpoint2 = ref({
         <span>ابزار پزشکی</span>
       </v-card>
     </v-col>
+    <!-- ===== site plans↓===== -->
     <choosePlan />
+    <!-- ===== product categories↓===== -->
     <category />
     <v-row class="px-md-16">
       <v-col md="6" cols="12" class="px-6">
@@ -103,6 +111,7 @@ const breakpoint2 = ref({
         />
       </v-col>
     </v-row>
+    <!-- ===== newest product ↓===== -->
     <h3 class="mainTitle text-center mt-16">جدیدترین محصولات</h3>
     <div class="sliderPaging" v-if="myCarousel">
       <button class="nextBtn" @click="myCarousel.data.next">
@@ -112,7 +121,6 @@ const breakpoint2 = ref({
         <v-icon icon="fi fi-rr-arrow-small-left" />
       </button>
     </div>
-    <!-- <client-only> -->
     <carousel
       class="mt-16 pa-0"
       :itemsToShow="2"
@@ -139,7 +147,7 @@ const breakpoint2 = ref({
         />
       </slide>
     </carousel>
-    <!-- </client-only> -->
+    <!-- ===== site banner and countdown↓===== -->
     <v-col cols="12" class="mt-14 bannerSection">
       <div class="px-0 cdCard"><countDownCard /></div>
       <div class="bannerImg pr-lg-6">
@@ -152,6 +160,7 @@ const breakpoint2 = ref({
       </div>
     </v-col>
     <v-col cols="12" class="pa-0">
+      <!-- ===== site customers↓===== -->
       <customers />
       <div class="sliderPaging" v-if="myCarousel2">
         <button class="nextBtn" @click="myCarousel2.data.next">
@@ -187,6 +196,7 @@ const breakpoint2 = ref({
     <v-col md="12" class="ma-auto mt-12 d-md-block d-none">
       <v-img height="100%" :src="`/assets/images/meymedOptions.png`" />
     </v-col>
+    <!-- ===== faq section ↓===== -->
     <v-col cols="12" class="pa-0 d-flex flex-column mt-16">
       <div class="mainTitle text-center">سوالات متداول</div>
 

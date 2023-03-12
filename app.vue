@@ -1,5 +1,6 @@
  
 <template>
+  <!-- ===== root component ↓ ===== -->
   <v-app>
     <NuxtPage />
   </v-app>

@@ -2,9 +2,11 @@
 import "../public/assets/scss/components/footer.scss";
 </script>
 <template>
+  <!-- ===== footer ===== -->
   <v-col md="12" class="footer ma-auto">
     <v-card elevation="0" class="footerCard" color="#4484C6" width="100%">
       <div class="aboutBg">
+        <!-- ===== about site ===== -->
         <v-col cols="12" md="11" class="aboutSection ma-auto">
           <v-img src="/assets/images/logo.png" width="150" class="ma-auto" />
           <div class="aboutTitle">
@@ -30,6 +32,7 @@ import "../public/assets/scss/components/footer.scss";
           </div>
         </v-col>
       </div>
+      <!-- ===== footer options ===== -->
       <v-row class="px-10">
         <v-col cols="12" lg="6" class="pt-6">
           <div class="d-flex flex-wrap justify-space-between align-center">
@@ -173,6 +176,7 @@ import "../public/assets/scss/components/footer.scss";
         <!-- </v-col> -->
       </v-row>
     </v-card>
+    <!-- ===== copyright===== -->
     <div class="copyright my-6 mt-8">
       استفاده از مطالب فروشگاه اینترنتی می مد فقط برای مقاصد غیرتجاری و با ذکر
       منبع بلامانع است. کلیه حقوق این سایت متعلق به شرکت لوازم پزشکی میثم

@@ -1,3 +1,5 @@
+//testing api for products
+
 export default defineEventHandler((event) => {
   return {
     data: [{

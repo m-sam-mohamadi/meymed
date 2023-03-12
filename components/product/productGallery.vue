@@ -4,6 +4,7 @@ let isMount = ref(false);
 let toggleBtn = ref(0);
 let sizeBtn = ref(0);
 let count = ref(2);
+//images list for gallery
 const images = ref([
   "Rectangle218",
   "Rectangle218",
@@ -11,6 +12,7 @@ const images = ref([
   "unsplash_SZ1DDwCPqkE-6",
   "Rectangle218",
 ]);
+//increase and decrease for counter
 function increment() {
   count.value++;
 }
@@ -25,6 +27,7 @@ onMounted(() => {
 <template>
   <div class="productDetail mt-6" v-if="isMount">
     <v-row>
+      <!-- ===== gallery section ===== -->
       <v-col cols="12" md="5">
         <v-card width="100%" class="productImage" elevation="0">
           <div class="availableProduct true">موجود</div>
@@ -39,7 +42,6 @@ onMounted(() => {
               style="height: 100%"
               class="overflow-auto productImageSlider"
             >
-              <!-- <div style="width: 100%; overflow: auto" class="d-flex"> -->
               <v-btn
                 color="#4A95E3"
                 variant="text"
@@ -61,6 +63,7 @@ onMounted(() => {
       </v-col>
       <v-col cols="12" md="7">
         <v-card width="100%" class="productImage pa-12 pt-14" elevation="0">
+          <!-- ===== intro product ===== -->
           <v-row>
             <v-col cols="12" lg="8">
               <div class="serial">کد 12330</div>
