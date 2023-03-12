@@ -1,0 +1,86 @@
+@import "../utilities/functions";
+
+.countDown {
+    background-color: white;
+    box-shadow: 5px 8px 30px -15px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 15px !important;
+    position: relative;
+    background: #9FC1E5;
+    border-radius: 30px !important;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+    .glovesBg {
+        position: absolute;
+        bottom: 0;
+        right: -12%;
+        z-index: -1;
+        mix-blend-mode: luminosity !important;
+    }
+
+    .cdContainer {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        padding: 50px;
+        z-index: 10;
+        @include centering('flex');
+        flex-direction: column;
+        background: #9FC1E5;
+    }
+
+    .cdTitle {
+        font-size: 36px;
+        color: white;
+        text-align: center;
+        font-weight: 800;
+        margin-top: 0;
+        align-self: start;
+
+    }
+
+    .cdDetail {
+        @include centering('flex');
+        text-align: center;
+        margin: auto;
+        color: white;
+        font-weight: 500;
+        font-size: 16px;
+        align-self: start;
+        width: 76%;
+
+        @media (max-width:650px) {
+            width: 100%;
+
+        }
+
+        max-width: 100%
+    }
+
+    .cdController {
+        @include centering('flex');
+        justify-content: space-between !important;
+        width: 100%;
+        align-self: end;
+
+        .counter {
+            @include centering('flex');
+            flex-direction: row-reverse;
+
+            .cdDate {
+                @include centering('flex');
+                flex-direction: column;
+                margin: 0 18px;
+                font-weight: 800;
+                font-size: 36px;
+                color: white;
+
+                span {
+                    font-weight: 500;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

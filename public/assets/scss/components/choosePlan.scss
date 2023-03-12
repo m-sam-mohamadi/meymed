@@ -1,0 +1,59 @@
+@import "../utilities/functions";
+
+.planButtons {
+    // @include centering('flex');
+    box-shadow: 5px 8px 30px -15px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 15px !important;
+    background-color: white;
+    width: 100%;
+
+    .v-btn-group {
+        // padding: 20px !important; 
+        margin: auto !important;
+        height: fit-content !important;
+        padding: 15px 45px !important;
+
+        .v-btn {
+            margin: 0 10px !important;
+            padding: 15px 25px !important;
+            border-radius: 15px !important;
+            @include centering('flex');
+            flex-direction: column;
+
+            &:not(.v-btn--active) {
+                color: #A5A5A5 !important;
+            }
+
+            .v-btn__prepend {
+
+                @include centering('flex');
+                flex-direction: column;
+
+                margin: auto !important;
+                margin-bottom: 10px !important;
+                font-size: 18px !important;
+            }
+        }
+    }
+
+    .planForm {
+        width: 100%;
+
+        .planInputs {
+            margin-top: 14px;
+
+            .primaryInput {
+                .v-field {
+                    background: #F5F5F5;
+                    box-shadow: none !important;
+
+                    input::placeholder {
+                        color: #181818 !important;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+}

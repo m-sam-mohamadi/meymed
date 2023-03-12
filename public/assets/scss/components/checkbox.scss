@@ -1,0 +1,29 @@
+@import "../utilities/variables";
+@import "../utilities/functions";
+
+.checkbox {
+    // @include centering('flex'); 
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    .checkboxBox {
+
+        width: 18px;
+        height: 18px;
+        background-color: #F5F5F5;
+        border-radius: 5px;
+        @include centering('flex');
+        font-size: 7px;
+        color: $primaryColor;
+        cursor: pointer;
+        margin-left: 18px;
+    }
+
+    .checkboxText {
+        font-size: 12px;
+        color: black;
+        text-align: right;
+    }
+}

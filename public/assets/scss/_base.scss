@@ -1,0 +1,114 @@
+@import "./utilities/variables";
+@import "./utilities/fonts";
+@import "./utilities/functions";
+@import "./utilities/transition";
+@import "./utilities/customClass";
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $primaryColor;
+    border-radius: 100px;
+}
+
+body {
+    direction: rtl;
+    font-family: yekan;
+    background-color: $bgColor !important;
+    -webkit-font-smoothing: antialiased;
+    transform: translateZ(0) translate3d(0, 0, 0);
+    backface-visibility: hidden;
+
+}
+
+
+.v-application {
+    direction: rtl;
+    background-color: $bgColor !important;
+    -webkit-font-smoothing: antialiased;
+    transform: translateZ(0) translate3d(0, 0, 0);
+    backface-visibility: hidden;
+
+    .v-btn {
+        font-family: yekan;
+    }
+
+    .sliderPaging {
+        @include centering('flex');
+        margin-top: 10px;
+
+        .nextBtn {
+            padding: 6px;
+            border-radius: 15px;
+            background-color: white;
+            margin: 0 5px;
+            color: #374957;
+            transition: .3s;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.6);
+            }
+        }
+
+        .prevBtn {
+            padding: 6px;
+            border-radius: 15px;
+            background-color: white;
+            margin: 0 5px;
+            color: #374957;
+            transition: .3s;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.6);
+            }
+        }
+    }
+
+
+    .v-divider {
+        border-color: #fff !important;
+        opacity: .6 !important;
+
+        //  .v-divider--vertical {
+        //      border-width: 0 2px 0 0 !important;
+        //      border-color: #fff !important;
+        //  }
+    }
+
+    .v-badge {
+
+        .v-badge__badge {
+            &.v-theme--light {
+
+                color: #000 !important;
+            }
+
+            bottom: calc(100% - 15px) !important;
+            left: calc(100% - 20px) !important;
+        }
+    }
+
+    .v-btn-group {
+        @include centering('flex');
+
+        @media (max-width:1200px) {
+            scroll-snap-type: x proximity;
+            overflow: auto !important;
+        }
+
+        .v-btn {
+            scroll-snap-align: center;
+            margin: 0 20px;
+            border-radius: 15px !important;
+            letter-spacing: 0.3px;
+        }
+    }
+
+    .v-btn {
+        letter-spacing: 0.3px;
+
+    }
+}

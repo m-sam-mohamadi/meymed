@@ -1,0 +1,228 @@
+@import "../utilities/variables";
+@import "../utilities/functions";
+
+
+
+.catCard {
+    user-select: none;
+    box-shadow: 5px 8px 30px -15px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 15px !important;
+    margin: 0 12px;
+    @include centering('flex');
+    flex-direction: column !important;
+
+    @media (max-width:1200px) {
+        margin: 10px 10px;
+    }
+
+    span {
+        width: 100%;
+        padding: 0;
+        word-break: keep-all;
+        @include centering('flex');
+        margin-bottom: 10px;
+        font-size: 14px;
+
+        color: #454545;
+    }
+}
+
+.planDetailCard {
+    box-shadow: 5px 8px 30px -15px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 15px !important;
+    padding: 30px;
+    background-color: white;
+    @include centering('flex');
+    flex-direction: column;
+
+    .planLogo {
+        margin-top: -60px;
+        margin-bottom: 30px;
+    }
+
+    >p {
+
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    >span {
+
+        font-weight: 400;
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+.bgEllipse {
+    position: absolute !important;
+    width: 1108px !important;
+    height: 550px !important;
+    left: 50% !important;
+    top: 354px !important;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.bgSquare {
+
+    width: 793px;
+    height: 793px;
+    position: absolute !important;
+    left: 52%;
+    top: 1700px;
+    z-index: -2;
+}
+
+.bgRect {
+
+
+    position: absolute;
+    width: 851.67px;
+    height: 851.67px;
+    right: 50%;
+    top: 80%;
+    z-index: -2;
+
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px 50px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.bannerSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-gap: 20px 50px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    .cdCard {
+        width: 115%;
+        height: 100%;
+
+        @media (max-width:1200px) {
+            width: 100%;
+        }
+    }
+
+    .bannerImg {
+        width: 100%;
+    }
+}
+
+.faq {
+    .v-expansion-panels {
+        &:not(.v-expansion-panels--variant-accordion)> :not(:first-child):not(:last-child):not(.v-expansion-panel--active):not(.v-expansion-panel--before-active) {
+            border-radius: 15px !important;
+
+            &::after {
+                display: none !important;
+            }
+        }
+
+        &:not(.v-expansion-panels--variant-accordion)> :last-child:not(:first-child):not(.v-expansion-panel--active):not(.v-expansion-panel--after-active) {
+            border-radius: 15px !important;
+
+            &::after {
+                display: none !important;
+            }
+        }
+
+        &:not(.v-expansion-panels--variant-accordion)> :not(:first-child):not(:last-child):not(.v-expansion-panel--active):not(.v-expansion-panel--after-active) {
+            border-radius: 15px !important;
+
+            &::after {
+                display: none !important;
+            }
+        }
+
+        &:not(.v-expansion-panels--variant-accordion)> :first-child:not(:last-child):not(.v-expansion-panel--active):not(.v-expansion-panel--before-active) {
+            border-radius: 15px !important;
+
+            &::after {
+                display: none !important;
+            }
+        }
+
+        .faqIcon {
+            background-color: #DEEFF5;
+            color: #374957;
+            padding: 20px;
+            border-radius: 100px;
+            transition: .3s;
+            transform-origin: center;
+        }
+
+        .faqCounter {
+            margin-left: 18px;
+            font-weight: 900;
+            font-size: 36px;
+            color: #ECECEC;
+        }
+
+        .v-expansion-panel-text__wrapper {
+            padding: 25px;
+            font-weight: 500;
+            font-size: 13px;
+            text-align: right;
+            color: #636363;
+        }
+
+        .v-expansion-panel-title--active {
+
+            .faqIcon {
+                transform: rotate(45deg);
+                background-color: #4A95E3;
+                color: white;
+            }
+
+        }
+
+        .v-expansion-panel {
+            margin-bottom: 30px;
+            background: #FFFFFF;
+            padding: 6px;
+
+            &.v-expansion-panel--active {
+                border-radius: 15px !important;
+
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -25%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                height: 1px;
+                background-image: linear-gradient(to right, transparent 20%, #C2D4DB, transparent 85%);
+            }
+
+            &:last-child {
+                &::before {
+                    display: none !important;
+                }
+            }
+        }
+
+        .v-expansion-panel__shadow {
+            box-shadow: 5px 10px 30px -15px rgba(0, 0, 0, 0.1) !important;
+
+        }
+
+        .v-expansion-panel-title__overlay {
+            display: none !important;
+        }
+    }
+}
