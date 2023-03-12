@@ -1,7 +1,7 @@
 <script setup>
-// import "vue3-carousel/dist";
 import { Carousel, Slide } from "vue3-carousel";
 import { ref } from "vue";
+
 const settings = ref({
   itemsToShow: 1,
   snapAlign: "center",
